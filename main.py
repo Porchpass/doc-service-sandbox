@@ -1,15 +1,14 @@
-from src.utils import docraptor, templating
+from src.utils import docraptor, templating, writer
 
 # render an html template
 html = templating.render_template()
 
 # write file (to preview in browser)
 file_path = 'out/index.html'
-f = open(file_path, 'w')
-f.write(html)
-f.close()
-print('file written to ' + file_path)
+writer.write_file(file_path, html)
 
 # create pdf in DocRaptor
-# response = docraptor.create_doc()
+# response = docraptor.create_doc(
+  # TODO: add args
+# )
 # print(response)

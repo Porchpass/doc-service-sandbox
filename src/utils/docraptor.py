@@ -4,8 +4,12 @@ import docraptor
 
 load_dotenv()
 
+# ensure we have an API key
+docraptor_api_key = os.getenv('DOCRAPTOR_API_KEY', None)
+if not docraptor_api_key : 
+  raise Exception("missing DOCRAPTOR_API_KEY")
+
 # configure DocRaptor
-docraptor_api_key = os.getenv('DOCRAPTOR_API_KEY')
 doc_api = docraptor.DocApi()
 doc_api.api_client.configuration.username = docraptor_api_key
 
