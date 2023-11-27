@@ -6,10 +6,6 @@ A repo to play around with DocRaptor.
 
 Install Virtualenv.
 
-* https://pip.pypa.io/en/stable/user_guide/
-* https://pypi.org/project/pipx/
-* https://virtualenv.pypa.io/en/latest/user_guide.html
-
 Set up a virtual environment. 
 
 `virtualenv .venv`
@@ -29,3 +25,11 @@ Install packages
 ## Run
 
 `python3 main.py`
+
+## Helpful links
+
+* https://pip.pypa.io/en/stable/user_guide/
+* https://pypi.org/project/pipx/
+* https://virtualenv.pypa.io/en/latest/user_guide.html
+* https://jinja.palletsprojects.com/en/3.1.x/api/#basics
+* https://stackoverflow.com/questions/71015047/how-to-use-jinja-to-render-html-without-flask
