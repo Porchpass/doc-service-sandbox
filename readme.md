@@ -33,3 +33,4 @@ Install packages
 * https://virtualenv.pypa.io/en/latest/user_guide.html
 * https://jinja.palletsprojects.com/en/3.1.x/api/#basics
 * https://stackoverflow.com/questions/71015047/how-to-use-jinja-to-render-html-without-flask
+* https://jenil.github.io/chota/
