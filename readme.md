@@ -26,6 +26,10 @@ Install packages
 
 `python3 main.py`
 
+## Preview
+
+`python3 -m http.server -d ./out` and visit the `temp.html` in the browser.
+
 ## Helpful links
 
 * https://pip.pypa.io/en/stable/user_guide/

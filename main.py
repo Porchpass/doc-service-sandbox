@@ -4,10 +4,11 @@ from src.utils import docraptor, templating
 html = templating.render_template()
 
 # write file (to preview in browser)
-f = open('temp.html', 'w')
+file_path = 'out/index.html'
+f = open(file_path, 'w')
 f.write(html)
 f.close()
-print('temp.html file written')
+print('file written to ' + file_path)
 
 # create pdf in DocRaptor
 # response = docraptor.create_doc()
