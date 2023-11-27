@@ -1,6 +1,6 @@
 # DocRaptor Sandbox
 
-A repo to play around with DocRaptor.
+Trying out DocRaptor and Jinja templating.
 
 ## Setup
 

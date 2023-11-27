@@ -2,16 +2,28 @@
 <html lang="en">
 <head>
 	{% block head %}
-		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="https://unpkg.com/chota@latest">
+		<style>
+			body.dark {
+				--bg-color: #000;
+				--bg-secondary-color: #131316;
+				--font-color: #f5f5f5;
+				--color-grey: #ccc;
+				--color-darkGrey: #777;
+			}
+			.container {
+				max-width: 840px;
+				margin: 0 auto;
+			}
+		</style>
 		<title>{% block title %}{% endblock %} - My Webpage</title>
 	{% endblock %}
 </head>
-<body>
-	<div id="content">{% block content %}{% endblock %}</div>
-	<div id="footer">
-		{% block footer %}
-		&copy; Copyright 2023 by <a href="http://domain.invalid/">you</a>.
-		{% endblock %}
-	</div>
+<body class="dark">
+	{% include 'partials/header.html.jinja' %}
+	<main id="content" class="container">
+		{% block content %}{% endblock %}
+	</main>
+	{% include 'partials/footer.html.jinja' %}
 </body>
 </html>
