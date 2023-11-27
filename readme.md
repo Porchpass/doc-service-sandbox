@@ -18,6 +18,14 @@ Make sure to activate it (Mac / Linux).
 
 `source .venv/bin/activate`
 
+Add ENV vars. Create the file and go add the values.
+
+`cp .env.sample .env`
+
+Install packages
+
+`pip3 install -r requirements.txt`
+
 ## Run
 
 `python3 main.py`
