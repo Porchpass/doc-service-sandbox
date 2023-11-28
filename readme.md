@@ -28,7 +28,7 @@ Use the optional `--docraptor` arg to create PDF in DocRaptor and save the resul
 
 ## HTML Preview
 
-`python3 -m http.server -d ./out` and visit the `temp.html` in the browser.
+`python3 -m http.server -d ./out` and open in the browser.
 
 ## Helpful links
 
