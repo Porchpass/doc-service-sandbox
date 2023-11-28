@@ -1,22 +1,20 @@
 # DocRaptor Sandbox
 
-Trying out DocRaptor and Jinja templating.
+Trying out [DocRaptor](https://docraptor.com/documentation/pdf_generation/reference) and [Jinja](https://jinja.palletsprojects.com/en/3.1.x/api/#basics) templating.
 
 ## Setup
 
-Install Virtualenv.
-
-Set up a virtual environment. 
+Install [Virtualenv](https://virtualenv.pypa.io/en/latest/user_guide.html) and set up an environment:
 
 `virtualenv .venv`
 
-Make sure to activate it (Mac / Linux). 
+Make sure to activate it (Mac / Linux):
 
 `source .venv/bin/activate`
 
-Add ENV vars. Create the file and go add the values.
+Add ENV vars.
 
-`cp .env.sample .env`
+Create the file `cp .env.sample .env` and enter the values.
 
 Install packages
 
