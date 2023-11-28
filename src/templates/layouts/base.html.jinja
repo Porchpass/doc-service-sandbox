@@ -4,13 +4,32 @@
 	{% block head %}
 		<link rel="stylesheet" href="https://unpkg.com/chota@latest">
 		<style>
-			body.dark {
-				--bg-color: #000;
-				--bg-secondary-color: #131316;
-				--font-color: #f5f5f5;
-				--color-grey: #ccc;
-				--color-darkGrey: #777;
+			header {
+				flow: static(header-html);
 			}
+			footer {
+				flow: static(footer-html);
+			}
+
+			@page {
+				size: A4 portrait;
+				margin: 50px 0.75in 25px;
+				@top {
+					content: flow(header-html);
+				}
+				@bottom {
+					content: flow(footer-html);
+				}
+			}
+
+			.chapter {
+				break-before: break;
+			}
+
+			.heading { break-after: avoid; }
+			
+			section { break-inside: avoid; }
+			
 			.container {
 				max-width: 840px;
 				margin: 0 auto;
@@ -19,11 +38,14 @@
 		<title>{% block title %}{% endblock %} - My Webpage</title>
 	{% endblock %}
 </head>
-<body class="dark">
+<body>
 	{% include 'partials/header.html.jinja' %}
+	
+	{# Note: The footer content is ABOVE the rest of the document content: https://docraptor.com/documentation/article/1067094-headers-footers#}
+	{% include 'partials/footer.html.jinja' %}
+	
 	<main id="content" class="container">
 		{% block content %}{% endblock %}
 	</main>
-	{% include 'partials/footer.html.jinja' %}
 </body>
 </html>

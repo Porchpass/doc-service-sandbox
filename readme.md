@@ -22,11 +22,13 @@ Install packages
 
 `pip3 install -r requirements.txt`
 
-## Run
+## Compile template
 
-`python3 main.py`
+Use the optional `--docraptor` arg to create PDF in DocRaptor and save the result to your local machine.
 
-## Preview
+`python3 main.py --docraptor`
+
+## HTML Preview
 
 `python3 -m http.server -d ./out` and visit the `temp.html` in the browser.
 
@@ -37,4 +39,5 @@ Install packages
 * https://virtualenv.pypa.io/en/latest/user_guide.html
 * https://jinja.palletsprojects.com/en/3.1.x/api/#basics
 * https://stackoverflow.com/questions/71015047/how-to-use-jinja-to-render-html-without-flask
+* https://docraptor.com/documentation/pdf_generation/reference
 * https://jenil.github.io/chota/

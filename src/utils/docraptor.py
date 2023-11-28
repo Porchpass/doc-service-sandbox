@@ -14,11 +14,15 @@ doc_api = docraptor.DocApi()
 doc_api.api_client.configuration.username = docraptor_api_key
 
 def create_doc(
-  file_name: str = "docraptor-sandbox",
-  document_content: str = "<html><body>Hello World</body></html>",
+  file_name: str,
+  document_content: str,
   document_type: str = "pdf",
   test: bool = True,
 ):
+  if not file_name:
+    raise Exception("create_doc missing file_name")
+  if not document_content:
+    raise Exception("create_doc missing document_content")
   result = None 
   try:
     result = doc_api.create_doc({
