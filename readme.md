@@ -39,3 +39,6 @@ Use the optional `--docraptor` arg to create PDF in DocRaptor and save the resul
 * https://stackoverflow.com/questions/71015047/how-to-use-jinja-to-render-html-without-flask
 * https://docraptor.com/documentation/pdf_generation/reference
 * https://jenil.github.io/chota/
+
+
+<!-- https://www.figma.com/file/WD0gPOMPNUOqF1NQWrKVdI/Document-Templates?type=design&node-id=212-2&mode=design&t=dtQOKwUTv0P1yMAj-0 -->
