@@ -3,15 +3,14 @@ fake_customer = {
 }
 
 fake_primary_borrower = {
-  primary_borrower_full_name: "TestPri P. Borrower",
-  primary_borrower_address: "123 P Borrow Blvd, City, State 00000",
+  "primary_borrower_full_name": "TestPri P. Borrower",
+  "primary_borrower_address": "123 P Borrow Blvd, City, State 00000",
 }
 
 fake_co_borrower = {
-  primary_borrower_full_name: "TestCo Co. Borrower",
-  primary_borrower_address: "123 Co Borrow Blvd, City, State 00000",
+  "primary_borrower_full_name": "TestCo Co. Borrower",
+  "primary_borrower_address": "123 Co Borrow Blvd, City, State 00000",
 }
-
 
 fake_lender = {
   "lender_name": "Test Lender",
