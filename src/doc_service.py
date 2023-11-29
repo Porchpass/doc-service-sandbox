@@ -12,8 +12,7 @@ DocServiceArgs = TypedDict('DocServiceArgs', {
 def run_doc_service(args: DocServiceArgs):
   # render jinja template to html string
   html = templating.render_template(args)
-
-  # print(html)
+  print(html)
 
 #   # write file (to preview in browser)
 #   writer.write_file(out_dir + '/index.html', html)
