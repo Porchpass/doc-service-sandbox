@@ -1,0 +1,78 @@
+header {
+  flow: static(header-html);
+}
+
+footer {
+  flow: static(footer-html);
+}
+
+@page {
+  size: A4 portrait;
+  margin: 69px 0.75in 99px;
+  @top {
+    content: flow(header-html);
+  }
+  @bottom {
+    content: flow(footer-html);
+  }
+}
+
+body {
+  color: var(--color-on-surface-on-surface, #111827);
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal; 
+}
+
+header {
+  display: flex;
+  width: 732px;
+  padding-bottom: var(--space-spacing-2-xs, 0px);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-spacing-2-xs, 12px); 
+}
+
+h1 {
+  color: var(--color-on-surface-on-surface, #111827);
+  font-family: Inter;
+  font-size: 29.333px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.datalabel {
+  color: var(--color-on-surface-on-surface, #111827);
+  font-family: Inter;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase; 
+}
+
+.datapoint {
+  color: var(--color-on-surface-on-surface-muted, #4A5466);
+  font-family: Inter;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal; 
+}
+
+.container-narrow  {
+  max-width: 580px;
+  margin: 0 auto;
+}
+
+footer small {
+  color: var(--color-on-surface-on-surface-muted, #4A5466);
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal; 
+}

@@ -2,46 +2,13 @@
 <html lang="en">
 <head>
 	{% block head %}
-		<link rel="stylesheet" href="https://unpkg.com/chota@latest">
-		<style>
-			header {
-				flow: static(header-html);
-			}
-			footer {
-				flow: static(footer-html);
-			}
-
-			@page {
-				size: A4 portrait;
-				margin: 50px 0.75in 25px;
-				@top {
-					content: flow(header-html);
-				}
-				@bottom {
-					content: flow(footer-html);
-				}
-			}
-
-			.chapter {
-				break-before: break;
-			}
-
-			.heading { break-after: avoid; }
-			
-			section { break-inside: avoid; }
-			
-			.container {
-				max-width: 840px;
-				margin: 0 auto;
-			}
-		</style>
+		<link rel="stylesheet" href="style.css">
 		<title>{% block title %}{% endblock %} - My Webpage</title>
 	{% endblock %}
 </head>
 <body>
+	{# NOTE: DocRaptor headers and footers come before the content #}
 	{% include 'partials/header.html.jinja' %}
-	
-	{# Note: The footer content is ABOVE the rest of the document content: https://docraptor.com/documentation/article/1067094-headers-footers#}
 	{% include 'partials/footer.html.jinja' %}
 	
 	<main id="content" class="container">

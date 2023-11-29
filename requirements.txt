@@ -1,3 +1,4 @@
-python-dotenv
 docraptor
 jinja2
+pytest
+python-dotenv

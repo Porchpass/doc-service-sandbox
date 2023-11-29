@@ -20,11 +20,15 @@ Install packages
 
 `pip3 install -r requirements.txt`
 
-## Compile template
+## Usage
+
+Use a template slug to render a specific template:
+
+`python3 main.py template-slug`
 
 Use the optional `--docraptor` arg to create PDF in DocRaptor and save the result to your local machine.
 
-`python3 main.py --docraptor`
+`python3 main.py template-slug --docraptor`
 
 ## HTML Preview
 
