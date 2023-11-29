@@ -19,4 +19,25 @@ fake_lender = {
   "lender_website": "https://lender.com",
   "lender_originator": "Lender Originator Name",
   "lender_originator_nmls": "NMLS-000000",
+  "lender_logo": "https://placehold.co/600x400"
+}
+
+###############
+# Doc variables
+
+adverse_advisor_notice_args = {
+  "title": "Adverse Action Notice",
+  "slug": "adverse_action_notice",
+  "use_docraptor": False,
+  "test_mode": True,
+  "version": "20230405.1",
+  "variables": {
+    "date": "10/9/2024",
+    "notice_date": "10/10/2024",
+    "credit_score": 3,
+    **fake_customer,
+    **fake_primary_borrower,
+    **fake_co_borrower,
+    **fake_lender,
+  },
 }
