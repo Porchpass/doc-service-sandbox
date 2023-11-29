@@ -2,10 +2,45 @@
 
 {% block title %}Adverse Action Notice{% endblock %}
 
+{% set version = "20230405.1" %}
+
 {% block header %}
   {% include "partials/standard-header.html.jinja" %}
 {% endblock %}
 
-{% block footer %}
+{%  block footer %}
   {% include "partials/standard-footer.html.jinja" %}
+{% endblock %}
+
+{% block content %}
+  <h2>Thank you for your recent application.</h2>
+  <p>We regret that we are unable to approve your application at this time for the following reason(s):</p>
+  <ul>
+    <li>Credit Score below requirement</li>
+    {% if adverse_action_notice_text %}
+      <li>{{adverse_action_notice_text}}</li>
+    {% endif %}
+  </ul>
+  <p>Our decision was based in whole or in part on information obtained in a report from the consumer reporting agency listed below. You have a right under the Fair Credit Reporting Act to know the information contained in your credit file at the consumer reporting agency.</p>
+  <p>The reporting agency played no part in our decision and is unable to supply specific reasons why we have denied your application. You also have a right to a free copy of your report from the reporting agency, if you request it no later than 60 days after you receive this notice. In addition, if you find that any information contained in the report you receive is inaccurate or incomplete, you have the right to dispute the matter with the reporting agency.</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Reporting Agency Name:</th>
+        <td>Equifax</td>
+      </tr>
+      <tr>
+        <th>Reporting Agency Address:</th>
+        <td>EQUIFAX PO BOX 740241</td>
+      </tr>
+      <tr>
+        <th>Reporting Agency Website:</th>
+        <td>www.equifax.com/fcra</td>
+      </tr>
+      <tr>
+        <th>Reporting Agency Telephone number (Toll-Free):</th>
+        <td>800-685-1111</td>
+      </tr>
+    </tbody>
+  </table>
 {% endblock %}

@@ -1,3 +1,9 @@
+:root {
+  --color-on-surface-on-surface: #111827;
+}
+
+/* DocRaptor styles */
+
 header {
   flow: static(header-html);
 }
@@ -17,6 +23,33 @@ footer {
   }
 }
 
+/* css reset - https://www.digitalocean.com/community/tutorials/css-minimal-css-reset */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* our styles begin */
+
 body {
   font-family: 'Inter', sans-serif;
   color: var(--color-on-surface-on-surface, #111827);
@@ -27,25 +60,40 @@ body {
   line-height: normal; 
 }
 
-header {
-  display: flex;
-  width: 732px;
-  padding-bottom: var(--space-spacing-2-xs, 0px);
-  flex-direction: column;
-  align-items: flex-start;
-  gap: var(--space-spacing-2-xs, 12px); 
-}
-
-h1 {
+h1, h2, h3, h4, h5, h6 {
   color: var(--color-on-surface-on-surface, #111827);
   font-family: Inter;
-  font-size: 29.333px;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 600;
   line-height: normal;
 }
 
-.datalabel {
+h1 {
+  font-size: 29.333px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 20px;
+  font-style: normal;
+}
+
+h3 {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+h4 {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+hr {
+  height: var(--space-spacing-none, 0.667px);
+  background: var(--color-border-border-dim, #9AA2B2); 
+}
+
+/* .datalabel {
   color: var(--color-on-surface-on-surface, #111827);
   font-family: Inter;
   font-size: 10px;
@@ -62,6 +110,16 @@ h1 {
   font-style: normal;
   font-weight: 400;
   line-height: normal; 
+} */
+
+table {
+  border-radius: var(--radius-radius-minimal, 8px);
+  border: 1px solid var(--color-border-border, #D2D5DB); 
+}
+
+th, td {
+  border-top: 1px solid var(--color-border-border-subtle, #EAECF0);
+  border-left: 1px solid var(--color-border-border-subtle, #EAECF0); 
 }
 
 .container-narrow  {
@@ -76,4 +134,26 @@ footer small {
   font-style: normal;
   font-weight: 400;
   line-height: normal; 
+}
+
+/* partials */
+
+.standard-header {
+  display: flex;
+  width: 732px;
+  padding-bottom: var(--space-spacing-2-xs, 0px);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-spacing-2-xs, 12px); 
+}
+
+.ecra-notice {
+  border-top: 1px solid var(--color-border-border, #D2D5DB);
+  background: var(--color-surface-container-subtle, #F9FAFB); 
+  display: flex;
+  width: 580px;
+  padding: var(--space-spacing-2-xs, 12px);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-spacing-3-xs, 8px); 
 }
