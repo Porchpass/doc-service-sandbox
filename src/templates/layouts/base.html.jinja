@@ -11,7 +11,8 @@
 </head>
 <body>
 	{# NOTE: DocRaptor headers and footers come before the content #}
-	{% block header required %}{% endblock %}
+	{# {% block header required %}{% endblock %} #}
+	{% extends "partials/standard-header.html.jinja" %}
 	{% block footer required %}{% endblock %}
 	<main id="content" class="container">
 		{% block content %}{% endblock %}
