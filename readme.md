@@ -36,6 +36,26 @@ Install packages
 
 `python3 -m http.server -d ./out` and open in the browser.
 
+## 3rd-party usage
+
+```py
+from src.doc_service import run_doc_service
+
+result = run_doc_service({
+  "slug": str,
+  "use_docraptor": bool,
+  "test_mode": bool,
+  "variables": dict,
+})
+
+# Returns:
+# {
+#   "success": bool,
+#   "html": str,
+#   "pdf_bytes": bytes | None
+# }  
+```
+
 ## Helpful links
 
 * https://pip.pypa.io/en/stable/user_guide/

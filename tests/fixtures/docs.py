@@ -1,12 +1,18 @@
-from tests.fixtures.common import fake_customer, fake_primary_borrower, fake_co_borrower, fake_lender
+from tests.fixtures.common import (
+  fake_customer, 
+  fake_primary_borrower, 
+  fake_co_borrower, 
+  fake_lender
+)
 
-###############
-# Doc variables
+# devs: flip these settings to test different situations
+test_mode = True # should we write html files to fs?
+use_docraptor = False # should we generate PDF through DocRaptor?
 
 adverse_advisor_notice_args = {
   "slug": "adverse_action_notice",
-  "use_docraptor": False,
-  "test_mode": True,
+  "use_docraptor": use_docraptor,
+  "test_mode": test_mode,
   "variables": {
     "date": "10/9/2024",
     "notice_date": "10/10/2024",
@@ -21,8 +27,8 @@ adverse_advisor_notice_args = {
 
 kitchen_sink_args = {
   "slug": "kitchen_sink",
-  "use_docraptor": False,
-  "test_mode": True,
+  "use_docraptor": use_docraptor,
+  "test_mode": test_mode,
   "variables": {
     "date": "10/9/2024",
     "notice_date": "10/10/2024",

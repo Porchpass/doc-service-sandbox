@@ -15,7 +15,7 @@ RenderTemplateArgs = TypedDict('RenderTemplateArgs', {
 })
 
 # main method
-def render_template(args: RenderTemplateArgs):
+def render_template(args: RenderTemplateArgs) -> str:
   template = env.get_template(args['slug'] + '.html.jinja')
   html = template.render(args['variables'])
   return html

@@ -16,6 +16,8 @@ DocServiceResult = TypedDict('DocServiceArgs', {
   "pdf_bytes": bytes | None
 })
 
+# TODO: log which vars were and were not used when hydrating doc
+
 def run_doc_service(args: DocServiceArgs) -> DocServiceResult:
   out_file_path = out_dir + '/' + args['slug']
 
