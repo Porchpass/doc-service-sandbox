@@ -1,7 +1,6 @@
 {% extends "layouts/base.html.jinja" %}
 
-{% block title %}Kitchen Sink Demo{% endblock %}
-
+{% set title = "Kitchen Sink Demo" %}
 {% set version = "000000000.1" %}
 
 {% block header %}
@@ -23,6 +22,7 @@
     {% endfor %}
   </ul>
   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, facilis laborum. Voluptas dignissimos hic quibusdam minima dolorem in optio vel, molestiae reprehenderit officia voluptates dicta aspernatur fuga placeat magnam beatae.</p>
+  {% include "partials/ecra-notice.html.jinja" %}
   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, facilis laborum. Voluptas dignissimos hic quibusdam minima dolorem in optio vel, molestiae reprehenderit officia voluptates dicta aspernatur fuga placeat magnam beatae.</p>
   <h2>Here's a table</h2>
   <table>

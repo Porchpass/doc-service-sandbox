@@ -20,7 +20,7 @@ adverse_advisor_notice_args = {
 }
 
 kitchen_sink_args = {
-  "slug": "kitchen_sinc",
+  "slug": "kitchen_sink",
   "use_docraptor": False,
   "test_mode": True,
   "variables": {
