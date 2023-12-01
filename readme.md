@@ -39,7 +39,7 @@ Install packages
 ## 3rd-party usage
 
 ```py
-from src.doc_service import run_doc_service
+from src.doc_service import run_doc_service # TODO: how to make this import cleaner?
 
 result = run_doc_service({
   "slug": str,

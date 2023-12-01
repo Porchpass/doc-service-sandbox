@@ -1,5 +1,13 @@
 :root {
   --color-on-surface-on-surface: #111827;
+  --color-on-surface-on-surface-muted: #4A5466;
+  --color-surface-container-subtle: #F9FAFB;
+  --color-border-border-subtle: #EAECF0;
+  --color-border-border-dim: #9AA2B2;
+  --color-border-border: #D2D5DB;
+  --size-4: 4px;
+  --size-12: 12px;
+  --radius-radius-minimal: 8px;
 }
 
 /* DocRaptor styles */
@@ -27,6 +35,10 @@ footer {
 html {
   box-sizing: border-box;
   font-size: 16px;
+  width: 816px;
+  height: 1056px;
+  margin: 0 auto;
+  padding: 42px;
 }
 
 *, *:before, *:after {
@@ -37,6 +49,15 @@ body, h1, h2, h3, h4, h5, h6, p, ol, ul {
   margin: 0;
   padding: 0;
   font-weight: normal;
+}
+
+p {
+  font-size: 14px;
+  margin-bottom: var(--size-12);
+}
+
+.text-muted {
+  color: var(--color-on-surface-on-surface-muted);
 }
 
 ol, ul {
@@ -52,7 +73,7 @@ img {
 
 body {
   font-family: 'Inter', sans-serif;
-  color: var(--color-on-surface-on-surface, #111827);
+  color: var(--color-on-surface-on-surface);
   font-family: Inter;
   font-size: 12px;
   font-style: normal;
@@ -61,7 +82,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: var(--color-on-surface-on-surface, #111827);
+  color: var(--color-on-surface-on-surface);
   font-family: Inter;
   font-style: normal;
   font-weight: 600;
@@ -90,7 +111,7 @@ h4 {
 
 hr {
   height: var(--space-spacing-none, 0.667px);
-  background: var(--color-border-border-dim, #9AA2B2); 
+  background: var(--color-border-border-dim); 
 }
 
 /* .datalabel {
@@ -104,7 +125,7 @@ hr {
 }
 
 .datapoint {
-  color: var(--color-on-surface-on-surface-muted, #4A5466);
+  color: var(--color-on-surface-on-surface-muted);
   font-family: Inter;
   font-size: 10px;
   font-style: normal;
@@ -113,13 +134,19 @@ hr {
 } */
 
 table {
-  border-radius: var(--radius-radius-minimal, 8px);
-  border: 1px solid var(--color-border-border, #D2D5DB); 
+  border-radius: var(--radius-radius-minimal);
+  border: 1px solid var(--color-border-border); 
 }
 
 th, td {
-  border-top: 1px solid var(--color-border-border-subtle, #EAECF0);
-  border-left: 1px solid var(--color-border-border-subtle, #EAECF0); 
+  border-top: 1px solid var(--color-border-border-subtle);
+  border-left: 1px solid var(--color-border-border-subtle); 
+}
+
+tfoot {
+  border-top: 1px solid var(--color-border-border-subtle);
+  background-color: var(--color-surface-container-subtle);
+  font-size: 12px;
 }
 
 .container-narrow  {
@@ -128,7 +155,7 @@ th, td {
 }
 
 footer small {
-  color: var(--color-on-surface-on-surface-muted, #4A5466);
+  color: var(--color-on-surface-on-surface-muted);
   font-family: Inter;
   font-size: 12px;
   font-style: normal;
@@ -140,20 +167,26 @@ footer small {
 
 .standard-header {
   display: flex;
-  width: 732px;
+  justify-content: space-between;
   padding-bottom: var(--space-spacing-2-xs, 0px);
-  flex-direction: column;
-  align-items: flex-start;
-  gap: var(--space-spacing-2-xs, 12px); 
+  align-items: space-between;
 }
 
 .ecra-notice {
-  border-top: 1px solid var(--color-border-border, #D2D5DB);
-  background: var(--color-surface-container-subtle, #F9FAFB); 
   display: flex;
-  width: 580px;
-  padding: var(--space-spacing-2-xs, 12px);
   flex-direction: column;
   align-items: flex-start;
   gap: var(--space-spacing-3-xs, 8px); 
+  border-top: 1px solid var(--color-border-border, #D2D5DB);
+  background: var(--color-surface-container-subtle, #F9FAFB); 
+  padding: var(--space-spacing-2-xs, 12px);
+  margin: 0 auto;
+  width: 580px;
+}
+
+ @media screen {
+  body {
+    max-width: 750px;
+    margin: 0 auto;
+  }
 }
