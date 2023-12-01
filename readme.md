@@ -20,7 +20,7 @@ Install packages
 
 `pip3 install -r requirements.txt`
 
-## Usage
+## Future Usage by consumers
 
 ```py
 from src.doc_service import run_doc_service # TODO: how to make this import cleaner?
