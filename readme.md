@@ -48,7 +48,7 @@ Run `pytest` then go check the `out` directory for your html and pdfs.
 
 You can srve the html output locally by running `python3 -m http.server -d ./out` and navigating to the file in in the browser. 
 
-Just remember that the footer will be the first lement. See: [https://docraptor.com/documentation/article/1067094-headers-footers](https://docraptor.com/documentation/article/1067094-headers-footers)
+Just remember that the footer will be the first element. See: [https://docraptor.com/documentation/article/1067094-headers-footers](https://docraptor.com/documentation/article/1067094-headers-footers)
 
 ## Helpful links
 
