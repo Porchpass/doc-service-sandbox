@@ -38,8 +38,8 @@ def run_doc_service(args: DocServiceArgs) -> DocServiceResult:
       file_name="My two page pdf",
       document_content=html
     )
-    file_path = out_file_path + '.pdf'
     if test_mode:
+      file_path = out_file_path + '.pdf'
       writer.write_file(file_path, pdf_bytes, 'wb')
 
   return {
