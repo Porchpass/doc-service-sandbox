@@ -7,7 +7,7 @@ from tests.fixtures.common import (
 
 # devs: flip these settings to test different situations
 test_mode = True # should we write html files to fs?
-use_docraptor = False # should we generate PDF through DocRaptor?
+use_docraptor = True # should we generate PDF through DocRaptor?
 
 adverse_advisor_notice_args = {
   "slug": "adverse_action_notice",
@@ -33,6 +33,7 @@ kitchen_sink_args = {
     "date": "10/9/2024",
     "notice_date": "10/10/2024",
     "credit_score": 7,
+    "intro": "This entire paragraph is dynamically inserted! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "list_of_things": [
       'Item 1',
       'Item 2', 

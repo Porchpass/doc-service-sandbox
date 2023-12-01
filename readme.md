@@ -22,7 +22,8 @@ Install packages
 
 ## Testing
 
-`pytest`
+Run `pytest` then go check the `out` directory for your html and pdfs.
+
 
 ~~Use a template slug to render a specific template:~~
 

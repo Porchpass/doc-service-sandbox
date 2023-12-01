@@ -5,16 +5,18 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="style.css">
+		<style>
+			{% include "styles/styles.css.jinja" %}
+		</style>
 		<title>{{title}}</title>
 	{% endblock %}
 </head>
 <body>
 	{# NOTE: DocRaptor headers and footers come before the content #}
 	{% block header required %}{% endblock %}
-	{% block footer required %}{% endblock %}
 	<main id="content">
 		{% block content %}{% endblock %}
 	</main>
+	{% block footer required %}{% endblock %}
 </body>
 </html>
