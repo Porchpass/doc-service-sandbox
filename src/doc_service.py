@@ -19,13 +19,14 @@ DocServiceResult = TypedDict('DocServiceArgs', {
 # TODO: log which vars were and were not used when hydrating doc
 
 def run_doc_service(args: DocServiceArgs) -> DocServiceResult:
+  test_mode = args['test_mode']
   out_file_path = out_dir + '/' + args['slug']
 
   # render jinja template to html string
   html = templating.render_template(args)
   
   # optionally write html file (to preview in browser)
-  if args['test_mode']:
+  if test_mode:
     writer.write_file(out_file_path + '.html', html)
 
   # create pdf in DocRaptor
@@ -38,7 +39,8 @@ def run_doc_service(args: DocServiceArgs) -> DocServiceResult:
       document_content=html
     )
     file_path = out_file_path + '.pdf'
-    writer.write_file(file_path, pdf_bytes, 'wb')
+    if test_mode:
+      writer.write_file(file_path, pdf_bytes, 'wb')
 
   return {
     "success": True,
