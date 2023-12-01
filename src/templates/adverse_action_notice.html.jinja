@@ -12,34 +12,69 @@
 {% endblock %}
 
 {% block content %}
-  <h2>Thank you for your recent application.</h2>
-  <p>We regret that we are unable to approve your application at this time for the following reason(s):</p>
-  <ul>
-    <li>Credit Score below requirement</li>
-    {% if adverse_action_notice_text %}
-      <li>{{adverse_action_notice_text}}</li>
-    {% endif %}
-  </ul>
-  <p>Our decision was based in whole or in part on information obtained in a report from the consumer reporting agency listed below. You have a right under the Fair Credit Reporting Act to know the information contained in your credit file at the consumer reporting agency.</p>
-  <p>The reporting agency played no part in our decision and is unable to supply specific reasons why we have denied your application. You also have a right to a free copy of your report from the reporting agency, if you request it no later than 60 days after you receive this notice. In addition, if you find that any information contained in the report you receive is inaccurate or incomplete, you have the right to dispute the matter with the reporting agency.</p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Reporting Agency Name:</th>
-        <td>Equifax</td>
-      </tr>
-      <tr>
-        <th>Reporting Agency Address:</th>
-        <td>EQUIFAX PO BOX 740241</td>
-      </tr>
-      <tr>
-        <th>Reporting Agency Website:</th>
-        <td>www.equifax.com/fcra</td>
-      </tr>
-      <tr>
-        <th>Reporting Agency Telephone number (Toll-Free):</th>
-        <td>800-685-1111</td>
-      </tr>
-    </tbody>
-  </table>
+  <section class="chapter">
+    <h2>Thank you for your recent application.</h2>
+    <p>We regret that we are unable to approve your application at this time for the following reason(s):</p>
+    <ul>
+      <li>Credit Score below requirement</li>
+      {% if adverse_action_notice_text %}
+        <li>{{adverse_action_notice_text}}</li>
+      {% endif %}
+    </ul>
+    <p>Our decision was based in whole or in part on information obtained in a report from the consumer reporting agency listed below. You have a right under the Fair Credit Reporting Act to know the information contained in your credit file at the consumer reporting agency.</p>
+    <p>The reporting agency played no part in our decision and is unable to supply specific reasons why we have denied your application. You also have a right to a free copy of your report from the reporting agency, if you request it no later than 60 days after you receive this notice. In addition, if you find that any information contained in the report you receive is inaccurate or incomplete, you have the right to dispute the matter with the reporting agency.</p>
+    <div class="container-narrow">
+      <table>
+        <tbody>
+          <tr>
+            <th>Reporting Agency Name:</th>
+            <td>Equifax</td>
+          </tr>
+          <tr>
+            <th>Reporting Agency Address:</th>
+            <td>EQUIFAX PO BOX 740241</td>
+          </tr>
+          <tr>
+            <th>Reporting Agency Website:</th>
+            <td>www.equifax.com/fcra</td>
+          </tr>
+          <tr>
+            <th>Reporting Agency Telephone number (Toll-Free):</th>
+            <td>800-685-1111</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="chapter">
+    <p>We also obtained your credit score from this consumer reporting agency and used it in making our decision. Your credit score is a number that reflects the information in your consumer report. Your credit score can change, depending on how the information in your consumer report changes.</p>
+    <div class="container-narrow">
+      <table>
+        <tbody>
+          <tr>
+            <th>Your credit score:</th>
+            <td>{{credit_score}}</td>
+          </tr>
+          <tr>
+            <th>Date:</th>
+            <td>{{date}}</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="2">Scores range from a low of 300 to a high of 850.</td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+    <h2>Key factors that adversely affected your credit score:</h2>
+    <ol>
+      {% for factor in key_factors %}
+        <li>{{ factor }}</li>
+      {% endfor %}
+    </ol>
+    <p class="text-muted">If you have any questions regarding your credit score, you should contact the entity that provided the credit score at:</p>
+    {% include "partials/equifax-contact-table.html.jinja" %}
+  </section>
 {% endblock %}

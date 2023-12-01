@@ -1,3 +1,6 @@
+import sys
+print(sys.argv)
+
 from tests.fixtures.common import (
   fake_customer, 
   fake_primary_borrower, 
@@ -18,6 +21,13 @@ adverse_advisor_notice_args = {
     "notice_date": "10/10/2024",
     "credit_score": 3,
     "adverse_action_notice_text": "This is some test advisor notice text...",
+    "key_factors": [
+      "This is one reason",
+      "Here are 2 more reasons",
+      "Three reasons is a lot already",
+      "There's a fourth reason?!",
+      "This is the last reason",
+    ],
     **fake_customer,
     **fake_primary_borrower,
     **fake_co_borrower,

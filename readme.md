@@ -2,7 +2,7 @@
 
 Trying out [DocRaptor](https://docraptor.com/documentation/pdf_generation/reference) and [Jinja](https://jinja.palletsprojects.com/en/3.1.x/api/#basics) templating.
 
-## Setup
+## Dev Setup
 
 Install [Virtualenv](https://virtualenv.pypa.io/en/latest/user_guide.html) and set up an environment:
 
@@ -20,24 +20,7 @@ Install packages
 
 `pip3 install -r requirements.txt`
 
-## Testing
-
-Run `pytest` then go check the `out` directory for your html and pdfs.
-
-
-~~Use a template slug to render a specific template:~~
-
-~~`python3 main.py template-slug`~~
-
-~~Use the optional `--docraptor` arg to create PDF in DocRaptor and save the result to your local machine.~~
-
-~~`python3 main.py template-slug --docraptor`~~
-
-## HTML Preview
-
-`python3 -m http.server -d ./out` and open in the browser.
-
-## 3rd-party usage
+## Usage
 
 ```py
 from src.doc_service import run_doc_service # TODO: how to make this import cleaner?
@@ -56,6 +39,16 @@ result = run_doc_service({
 #   "pdf_bytes": bytes | None
 # }  
 ```
+
+## Testing
+
+Run `pytest` then go check the `out` directory for your html and pdfs.
+
+## Previewing HTML
+
+You can srve the html output locally by running `python3 -m http.server -d ./out` and navigating to the file in in the browser. 
+
+Just remember that the footer will be the first lement. See: [https://docraptor.com/documentation/article/1067094-headers-footers](https://docraptor.com/documentation/article/1067094-headers-footers)
 
 ## Helpful links
 
