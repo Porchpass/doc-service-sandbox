@@ -16,7 +16,9 @@
   --max-width-narrow: 580px;
 }
 
+/********************/
 /* DocRaptor styles */
+/********************/
 
 header {
   flow: static(header-html);
@@ -45,7 +47,11 @@ h1 { counter-reset: chapter; }
   }
 }
 
-/* css reset - https://www.digitalocean.com/community/tutorials/css-minimal-css-reset */
+/**************************************************************************/
+/* css reset                                                              */
+/* https://www.digitalocean.com/community/tutorials/css-minimal-css-reset */
+/**************************************************************************/
+
 html {
   box-sizing: border-box;
   font-size: 16px;
@@ -75,7 +81,9 @@ img {
   height: auto;
 }
 
+/********************/
 /* our styles begin */
+/********************/
 
 body {
   font-family: 'Inter', sans-serif;
@@ -90,7 +98,6 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--color-on-surface-on-surface);
   font-family: Inter;
   font-style: normal;
-  font-weight: 600;
   line-height: normal;
   font-weight: 700;
 }
@@ -133,13 +140,15 @@ table {
   margin-right: auto;
 }
 
-th, td {
-  border-top: 1px solid var(--color-border-border-subtle);
-  border-left: 1px solid var(--color-border-border-subtle); 
+th {
+  font-weight: bold;
 }
 
-td {
+th, td {
+  border-top: 1px solid var(--color-border-border-subtle);
+  border-left: 1px solid var(--color-border-border-subtle);
   padding: var(--size-12);
+  text-align: left;
 }
 
 tfoot {
@@ -148,7 +157,21 @@ tfoot {
   font-size: 12px;
 }
 
+footer, footer p, footer small {
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal; 
+}
+
+footer small {
+  color: var(--color-on-surface-on-surface-muted);
+}
+
+/*********/
 /* utils */
+/*********/
 
 .flex {
   display: flex;
@@ -198,6 +221,10 @@ tfoot {
   align-items: stretch;
 }
 
+.font-bold {
+  font-weight: bold;
+}
+
 .text-muted {
   color: var(--color-on-surface-on-surface-muted);
 }
@@ -207,33 +234,13 @@ tfoot {
   padding-top: var(--size-8);
 }
 
-footer, footer p, footer small {
-  font-family: Inter;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal; 
-}
-
-footer small {
-  color: var(--color-on-surface-on-surface-muted);
-}
-
+/************/
 /* partials */
+/************/
 
 .standard-header {
   display: flex;
   justify-content: space-between;
   padding-bottom: 12px;
   align-items: space-between;
-}
-
-.ecra-notice {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: var(--space-spacing-3-xs, 8px); 
-  border-top: 1px solid var(--color-border-border, #D2D5DB);
-  background: var(--color-surface-container-subtle, #F9FAFB); 
-  padding: var(--space-spacing-2-xs, 12px);
 }
