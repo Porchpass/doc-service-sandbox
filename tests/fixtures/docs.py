@@ -19,6 +19,7 @@ adverse_advisor_notice_args = {
   "variables": {
     "date": "10/9/2024",
     "notice_date": "10/10/2024",
+    "application_date": "10/10/2024",
     "credit_score": 3,
     "adverse_action_notice_text": "This is some test advisor notice text...",
     "key_factors": [

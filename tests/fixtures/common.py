@@ -8,8 +8,8 @@ fake_primary_borrower = {
 }
 
 fake_co_borrower = {
-  "primary_borrower_full_name": "TestCo Co. Borrower",
-  "primary_borrower_address": "123 Co Borrow Blvd, City, State 00000",
+  "co_borrower_full_name": "TestCo Co. Borrower",
+  "co_borrower_address": "123 Co Borrow Blvd, City, State 00000",
 }
 
 fake_lender = {
