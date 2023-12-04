@@ -47,15 +47,21 @@ h1 { counter-reset: chapter; }
 @page {
   size: A4 portrait;
   margin-top: 100px;
-  margin-bottom: 105px;
-  margin-left: 0.75in;
-  margin-left: 0.75in;
-  margin-right: 0.75in;
+  margin-bottom: 135px;
+  margin-left: 0.65in;
+  margin-right: 0.65in;
   @top {
     content: flow(header-html);
   }
   @bottom {
     content: flow(footer-html);
+  }
+  @bottom-right-corner {
+    color: var(--color-on-surface-on-surface-muted);
+    font-family: 'Inter', sans-serif;
+    padding-top: 96px;
+    font-size: var(--font-sm);
+    content: counter(page) "/" counter(pages);
   }
 }
 
@@ -119,22 +125,27 @@ h1 {
 }
 
 h2 {
+  margin-top: var(--space-lg);
   font-size: var(--font-xxl);
 }
 
 h3 {
+  margin-top: var(--space-lg);
   font-size: var(--font-md);
 }
 
 h4 {
+  margin-top: var(--space-md);
   font-size: var(--font-sm);
 }
 
 h5 {
+  margin-top: var(--space-md);
   font-size: var(--font-xs);
 }
 
 h6 {
+  margin-top: var(--space-md);
   font-size: var(--font-xxs);
 }
 
@@ -152,6 +163,8 @@ table {
   border: 1px solid var(--color-border-border);
   margin-left: auto;
   margin-right: auto;
+  margin-top: var(--space-xl);
+  margin-bottom: var(--space-xl);
   width: 100%;
 }
 
@@ -169,7 +182,7 @@ th, td {
 tfoot {
   border-top: 1px solid var(--color-border-border-subtle);
   background-color: var(--color-surface-container-subtle);
-  font-size: var(--font-sm);
+  font-size: var(--font-xs);
 }
 
 .table-borderless, .table-borderless th, .table-borderless td, tfoot {
@@ -182,10 +195,6 @@ footer, footer p, footer small {
   font-style: normal;
   font-weight: 400;
   line-height: normal; 
-}
-
-footer small {
-  color: var(--color-on-surface-on-surface-muted);
 }
 
 /*********/
@@ -261,6 +270,10 @@ footer small {
 }
 
 .gap-md {
+  gap: var(--space-md);
+}
+
+.gap-lg {
   gap: var(--space-lg);
 }
 
@@ -280,6 +293,32 @@ footer small {
 /* margin */
 .m-none {
   margin: 0;
+}
+
+.mt-none {
+  margin: 0;
+}
+
+.mr-none {
+  margin-right: 0;
+}
+
+.ml-none {
+  margin-left: 0;
+}
+
+.mb-none {
+  margin-bottom: 0;
+}
+
+.mx-none {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.my-none {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 /* font size */
@@ -334,11 +373,12 @@ footer small {
 
 .standard-header {
   padding-top: var(--space-lg);
-  height: 57px;
+  height: 85px;
+  border-bottom: 1px solid var(--color-border-border-subtle); 
 }
 
 .standard-header svg {
-  width: 120px;
+  width: 125px;
   height: auto;
 }
 
@@ -348,13 +388,22 @@ footer small {
 }
 
 .customers-info {
-  border: 1px solid var(--color-border-border-subtle); 
+  display: flex;
+  gap: 20px;
+  border-bottom: 1px solid var(--color-border-border-subtle); 
   border-left: none;
   border-right: none;
-  padding: var(--space-sm) 0px;
-  margin: var(--space-sm) 0px;
+  padding: 0px;
+  margin: 0px;
+}
+
+.customers-info table {
+  margin: var(--space-xs) 0px;
 }
 
 .customers-info td, .customers-info th {
-  padding: var(--space-none);
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 0px;
+  padding-right: var(--space-lg);
 }
