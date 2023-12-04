@@ -1,12 +1,12 @@
 :root {
+  /* colors */
   --color-on-surface-on-surface: #111827;
   --color-on-surface-on-surface-muted: #4A5466;
   --color-surface-container-subtle: #F9FAFB;
   --color-border-border-subtle: #EAECF0;
   --color-border-border-dim: #9AA2B2;
   --color-border-border: #D2D5DB;
-  --radius-radius-minimal: 8px;
-  --max-width-narrow: 580px;
+  /* spacing */
   --space-none: 0px;
   --space-xxs: 8px;
   --space-xs: 10px;
@@ -15,6 +15,7 @@
   --space-lg: 16px;
   --space-xl: 18px;
   --space-xxl: 20px;
+  /* font sizes */
   --font-xxs: 8px;
   --font-xs: 10px;
   --font-sm: 12px;
@@ -22,6 +23,9 @@
   --font-lg: 16px;
   --font-xl: 18px;
   --font-xxl: 20px;
+  /* misc */
+  --radius-radius-minimal: 8px;
+  --max-width-narrow: 580px;
 }
 
 /********************/
@@ -161,11 +165,14 @@ ol, ul {
 table {
   border-radius: var(--radius-radius-minimal);
   border: 1px solid var(--color-border-border);
+  border-collapse: separate;
+  border-spacing: 0;
   margin-left: auto;
   margin-right: auto;
   margin-top: var(--space-xl);
   margin-bottom: var(--space-xl);
   width: 100%;
+  overflow: hidden;
 }
 
 th {
@@ -173,15 +180,40 @@ th {
 }
 
 th, td {
-  border-top: 1px solid var(--color-border-border-subtle);
-  border-left: 1px solid var(--color-border-border-subtle);
+  border-right: 1px solid var(--color-border-border-subtle);
+  border-bottom: 1px solid var(--color-border-border-subtle);
   padding: var(--space-sm);
   text-align: left;
+}
+
+th:first-child, td:first-child {
+  border-left: 1px solid var(--color-border-border-subtle);
+}
+
+/* top-left border-radius */
+tr:first-child th:first-child {
+  border-top-left-radius: var(--radius-radius-minimal);
+}
+
+/* top-right border-radius */
+tr:first-child th:last-child {
+  border-top-right-radius: var(--radius-radius-minimal);
+}
+
+/* bottom-left border-radius */
+tr:last-child td:first-child {
+  border-bottom-left-radius: var(--radius-radius-minimal);
+}
+
+/* bottom-right border-radius */
+tr:last-child td:last-child {
+  /* border-bottom-right-radius: var(--radius-radius-minimal); */
 }
 
 tfoot {
   border-top: 1px solid var(--color-border-border-subtle);
   background-color: var(--color-surface-container-subtle);
+  border-radius: 0px 0px var(--radius-radius-minimal)  var(--radius-radius-minimal);
   font-size: var(--font-xs);
 }
 
