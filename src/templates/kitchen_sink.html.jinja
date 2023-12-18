@@ -15,7 +15,6 @@
   <h2>Testing everything</h2>
   <p>This doc is a place to test out all blocks and styles</p>
 
-
   <p>{{intro}}</p>
 
   <p class="text-muted">Use the <code>.text-muted</code> class for muted text.</p>
@@ -30,6 +29,10 @@
   </ul>
 
   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, facilis laborum. Voluptas dignissimos hic quibusdam minima dolorem in optio vel, molestiae reprehenderit officia voluptates dicta aspernatur fuga placeat magnam beatae.</p>
+
+  <h2>Customer Info</h2>
+
+  {% include "partials/customers-info.html.jinja" %}
 
   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, facilis laborum. Voluptas dignissimos hic quibusdam minima dolorem in optio vel, molestiae reprehenderit officia voluptates dicta aspernatur fuga placeat magnam beatae.</p>
     
@@ -59,4 +62,10 @@
       </tr>
     </tfoot>
   </table>
+  
+  <h2>Testing Equifax Contact Table</h2>
+
+  <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, facilis laborum. Voluptas dignissimos hic quibusdam minima dolorem in optio vel, molestiae reprehenderit officia voluptates dicta aspernatur fuga placeat magnam beatae.</p>
+
+  {% include "partials/equifax-contact-table.html.jinja" %}
 {% endblock %}
