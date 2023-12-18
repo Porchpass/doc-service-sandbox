@@ -1,18 +1,20 @@
-fake_customer = {
+from src.utils.types import Customer, PrimaryBorrower, CoBorrower, Lender
+
+fake_customer: Customer = {
   "customer_file_number": "1234567",
 }
 
-fake_primary_borrower = {
+fake_primary_borrower: PrimaryBorrower = {
   "primary_borrower_full_name": "TestPri P. Borrower",
   "primary_borrower_address": "123 P Borrow Blvd, City, State 00000",
 }
 
-fake_co_borrower = {
+fake_co_borrower: CoBorrower = {
   "co_borrower_full_name": "TestCo Co. Borrower",
   "co_borrower_address": "123 Co Borrow Blvd, City, State 00000",
 }
 
-fake_lender = {
+fake_lender: Lender = {
   "lender_name": "Test Lender",
   "lender_address": "123 Lender St, City, State 00000",
   "lender_phone": "1-800-LENDER",
