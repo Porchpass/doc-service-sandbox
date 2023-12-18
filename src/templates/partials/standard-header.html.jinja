@@ -1,7 +1,9 @@
 <header class="standard-header flex justify-content-space-between align-items-start">
   <div>
     <h1>{{ title }}</h1>
-    <p class="font-xs text-muted">DATE ISSUED: {{ notice_date }}</p>
+    {% if notice_date %}
+      <p class="font-xs text-muted">DATE ISSUED: {{ notice_date }}</p>
+    {% endif %}
   </div>
   {% include "partials/porchpass-logo.svg.jinja" %}
 </header>
