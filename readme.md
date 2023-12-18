@@ -60,3 +60,4 @@ Just remember that the footer will be the first element. See: [https://docraptor
 * https://docraptor.com/documentation/pdf_generation/reference
 
 <!-- https://www.figma.com/file/WD0gPOMPNUOqF1NQWrKVdI/Document-Templates?type=design&node-id=212-2&mode=design&t=dtQOKwUTv0P1yMAj-0 -->
+<!-- https://www.figma.com/file/WD0gPOMPNUOqF1NQWrKVdI/Document-Templates?type=design&node-id=373-693&mode=design&t=PmCa8As5d19F5LfH-0 -->

@@ -1,7 +1,7 @@
-from typing import TypedDict, Required
+from typing import List, TypedDict, Required, Union
 
-#################
-# DOC ARGS COMMON
+#####################
+# COMMON BETWEEN DOCS
 
 Customer = TypedDict('Customer', {
   "customer_file_number": Required[str],
@@ -27,20 +27,61 @@ Lender = TypedDict('Lender', {
   "lender_logo": str,
 })
 
-Doc = TypedDict('Doc', {
-  
+###################
+# SPECIFIC DOC ARGS
+
+# Adverse Advisor Notice
+
+_AdverseAdvisorNoticeVars = TypedDict('AdverseAdvisorNoticeVars', {
+  "date": str,
+  "notice_date": str,
+  "application_date": str,
+  "credit_score": int | float,
+  "adverse_action_notice_text": str,
+  "key_factors": List[str],
 })
 
-###################
-# DOC ARGS SPECIFIC
+AdverseAdvisorNoticeVars = Union[
+  _AdverseAdvisorNoticeVars,
+  Customer,
+  PrimaryBorrower,
+  CoBorrower,
+  Lender
+]
 
+# Kitchen Sink
 
+_KitchenSinkVars = TypedDict('KitchenSinkVars', {
+  "date": str,
+  "notice_date": str,
+  "application_date": str,
+  "credit_score": int | float,
+  "intro": str,
+  "list_of_things": List[str],
+})
 
+KitchenSinkVars = Union[
+  _KitchenSinkVars,
+  Customer,
+  PrimaryBorrower,
+  CoBorrower,
+  Lender
+]
 
-# TODO...
+DocVariables = AdverseAdvisorNoticeVars | KitchenSinkVars
 
-#############
-# DOC SERVICE
+##########
+# DOC ARGS
+
+Doc = TypedDict('Doc', {
+  "slug": Required[str],
+  "use_docraptor": bool,
+  "test_mode": bool,
+  "variables": DocVariables,
+})
+
+##################
+# DOC SERVICE FUNC
 
 DocServiceArgs = TypedDict('DocServiceArgs', {
   "slug": str,
@@ -52,6 +93,6 @@ DocServiceArgs = TypedDict('DocServiceArgs', {
 DocServiceResult = TypedDict('DocServiceArgs', {
   "success": bool,
   "html": str,
-  "pdf_bytes": bytes | None
+  "pdf_bytes": bytes | None,
 })
 
