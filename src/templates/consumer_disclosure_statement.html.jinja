@@ -1,0 +1,66 @@
+{% extends "layouts/base.html.jinja" %}
+
+{% set title = "Consumer Disclosure Statement" %}
+{% set version = "20230405.1" %}
+
+{% block header %}
+  {% include "partials/standard-header.html.jinja" %}
+{% endblock %}
+
+{%  block footer %}
+  {% include "partials/standard-footer.html.jinja" %}
+{% endblock %}
+
+{% block content %}
+  <section class="chapter">
+    <h2>Disclosure</h2>
+    
+    <p class="text-muted">Your credit application will be submitted to PorchPass, LLC (a licensed loan originator) for review. PorchPass, LLC, its employees, agents, or representative (or a person under their supervision, as appropriate) and lending partners may communicate the status of your application or address other questions you may have about your application or the loan process. {{dealer_name}}, its employees, agents, or representative may assist you with matters associated with the sales transaction - for example, the type of home to purchase, options, site improvements, or sales features that may impact your financing options.</p>
+
+    <p class="text-muted">During the sales process, if there are questions that may impact the financing of your purchase, {{dealer_name}}, may connect you with the appropriate representative(s) of PorchPass, LLC for your convenience.</p>
+
+    <p class="text-muted">Following the receipt of your credit application, a representative from PorchPass, LLC (or a person under their supervision, as appropriate) may contact you to discuss your application. Should you have any questions or concerns about your application, please contact the PorchPass, LLC at 210-670-5553.</p>
+
+    <p class="text-muted">Below is the list of PorchPass, LLC mortgage loan originators:</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>NMLS#</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Kimberly Soto</td>
+          <td>2512062</td>
+        </tr>
+        <tr>
+          <td>Jessica Ramirez</td>
+          <td>2127030</td>
+        </tr>
+        <tr>
+          <td>Diana Ruiz</td>
+          <td>2459101</td>
+        </tr>
+        <tr>
+          <td>Matthew Stacy</td>
+          <td>1997751</td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <p class="text-muted">By signing below, you acknowledge that you have read and understood the details provided, and also consent to PorchPass, LCC sharing the credit decision and other personally identifiable financial information you provide with {{dealer_name}}, for the purpose of facilitating this transaction.</p>
+
+    <p class="text-muted">You may withdraw your consent for PorchPass, LLC to share personally identifiable financial information with {{dealer_name}} at any time by calling 210-670-5553 or sending written request to: 84 NE LOOP 410 Suite 180 San Antonio, TX 78216</p>
+
+    <p class="text-muted">Letters and emails must have your customer file number and name in order to be processed. The withdrawal of consent will not affect your eligibility for any loan product provided by PorchPass, LLC or our lending partners but may result in slower processing times.</p>
+
+    <p class="text-muted text-center">(signature page follows)</p>
+  </section>
+  <section class="chapter">
+    <h2>Applicant:</h2>
+    <h2>PorchPass:</h2>
+    <h2>Retailer:</h2>
+  </section>
+{% endblock %}

@@ -1,4 +1,4 @@
-from src.utils.types import Doc, AdverseAdvisorNoticeVars, KitchenSinkVars
+from src.utils.types import Doc, AdverseAdvisorNoticeVars, ConsumerDisclosureStatementVars, KitchenSinkVars
 from tests.fixtures.common import (
   fake_customer, 
   fake_primary_borrower, 
@@ -10,7 +10,10 @@ from tests.fixtures.common import (
 test_mode = True # should we write html files to fs?
 use_docraptor = True # should we generate PDF through DocRaptor?
 
-adverse_advisor_notice_variables: AdverseAdvisorNoticeVars = {
+#######################
+# Adverse Action Notice
+
+adverse_action_notice_variables: AdverseAdvisorNoticeVars = {
   "date": "10/9/2024",
   "notice_date": "10/10/2024",
   "application_date": "10/10/2024",
@@ -29,12 +32,30 @@ adverse_advisor_notice_variables: AdverseAdvisorNoticeVars = {
   **fake_lender,
 }
 
-adverse_advisor_notice_args: Doc = {
+adverse_action_notice_args: Doc = {
   "slug": "adverse_action_notice",
   "use_docraptor": use_docraptor,
   "test_mode": test_mode,
-  "variables": adverse_advisor_notice_variables,
+  "variables": adverse_action_notice_variables,
 }
+
+###############################
+# Consumer Disclosure Statement
+
+consumer_disclosure_statement_args_variables: ConsumerDisclosureStatementVars = {
+  "dealer_name": "My Test Dealer",
+  **fake_lender,
+}
+
+consumer_disclosure_statement_args: Doc = {
+  "slug": "consumer_disclosure_statement",
+  "use_docraptor": use_docraptor,
+  "test_mode": test_mode,
+  "variables": consumer_disclosure_statement_args_variables,
+}
+
+##############
+# Kitchen Sink
 
 kitchen_sink_args: KitchenSinkVars = {
   "date": "10/9/2024",

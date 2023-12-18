@@ -32,7 +32,7 @@ Lender = TypedDict('Lender', {
 
 # Adverse Advisor Notice
 
-_AdverseAdvisorNoticeVars = TypedDict('AdverseAdvisorNoticeVars', {
+_AdverseAdvisorNoticeVars = TypedDict('_AdverseAdvisorNoticeVars', {
   "date": str,
   "notice_date": str,
   "application_date": str,
@@ -49,9 +49,17 @@ AdverseAdvisorNoticeVars = Union[
   Lender
 ]
 
+# Consumer Disclosure Statement
+
+_ConsumerDisclosureStatementVars = TypedDict('_ConsumerDisclosureStatement', {
+  "dealer_name": str
+})
+
+ConsumerDisclosureStatementVars = Union[_ConsumerDisclosureStatementVars, Lender]
+
 # Kitchen Sink
 
-_KitchenSinkVars = TypedDict('KitchenSinkVars', {
+_KitchenSinkVars = TypedDict('_KitchenSinkVars', {
   "date": str,
   "notice_date": str,
   "application_date": str,
@@ -68,7 +76,7 @@ KitchenSinkVars = Union[
   Lender
 ]
 
-DocVariables = AdverseAdvisorNoticeVars | KitchenSinkVars
+DocVariables = AdverseAdvisorNoticeVars | ConsumerDisclosureStatementVars | KitchenSinkVars
 
 ##########
 # DOC ARGS
