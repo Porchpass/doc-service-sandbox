@@ -1,7 +1,7 @@
 from typing import TypedDict
 from src.utils import docraptor, templating, writer
 
-out_dir = 'out'
+out_dir = 'tests/out'
 
 DocServiceArgs = TypedDict('DocServiceArgs', {
   "slug": str,
