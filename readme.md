@@ -48,7 +48,7 @@ Run `pytest` from the root of the project.
 
 You can serve the html output locally by running `python3 -m http.server -d ./tests/out` and navigating to the file in in the browser.
 
-NOTE: Just remember that the footer will be the first element in the HTML. See [https://docraptor.com/documentation/article/1067094-headers-footers](https://docraptor.com/documentation/article/1067094-headers-footers) for more info.
+**NOTE:** When looking at the HTML, the footer will be the first element you see, above the rest of the content. DocRaptor requires the repeated `headers` and `footers` to be output first in the markup. See [https://docraptor.com/documentation/article/1067094-headers-footers](https://docraptor.com/documentation/article/1067094-headers-footers) for more info.
 
 ## Helpful links
 
