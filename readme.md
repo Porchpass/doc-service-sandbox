@@ -1,6 +1,6 @@
 # DocRaptor Sandbox
 
-Trying out [DocRaptor](https://docraptor.com/documentation/pdf_generation/reference) and [Jinja](https://jinja.palletsprojects.com/en/3.1.x/api/#basics) templating.
+A DocGen service using [Jinja2](https://jinja.palletsprojects.com/en/3.1.x/api/#basics) templating and [DocRaptor](https://docraptor.com/documentation/pdf_generation/reference) PDF generation. 
 
 ## Dev Setup
 
@@ -46,9 +46,9 @@ Run `pytest` then go check the `out` directory for your html and pdfs.
 
 ## Previewing HTML
 
-You can serve the html output locally by running `python3 -m http.server -d ./out` and navigating to the file in in the browser. 
+You can serve the html output locally by running `python3 -m http.server -d ./out` and navigating to the file in in the browser.
 
-Just remember that the footer will be the first element. See: [https://docraptor.com/documentation/article/1067094-headers-footers](https://docraptor.com/documentation/article/1067094-headers-footers)
+NOTE: Just remember that the footer will be the first element in the HTML. See [https://docraptor.com/documentation/article/1067094-headers-footers](https://docraptor.com/documentation/article/1067094-headers-footers) for more info.
 
 ## Helpful links
 
