@@ -42,9 +42,9 @@ Install packages
 
 ## Testing
 
-Run `pytest` then go check the `out` directory for your html and pdfs.
+Run `pytest` from the root of the project.
 
-## Previewing HTML
+### Previewing HTML
 
 You can serve the html output locally by running `python3 -m http.server -d ./tests/out` and navigating to the file in in the browser.
 
