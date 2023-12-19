@@ -2,25 +2,7 @@
 
 A DocGen service using [Jinja2](https://jinja.palletsprojects.com/en/3.1.x/api/#basics) templating and [DocRaptor](https://docraptor.com/documentation/pdf_generation/reference) PDF generation. 
 
-## Dev Setup
-
-Install [Virtualenv](https://virtualenv.pypa.io/en/latest/user_guide.html) and set up an environment:
-
-`virtualenv .venv`
-
-Make sure to activate it (Mac / Linux):
-
-`source .venv/bin/activate`
-
-Add ENV vars.
-
-Create the file `cp .env.sample .env` and enter the values.
-
-Install packages
-
-`pip3 install -r requirements.txt`
-
-## Future Usage by consumers
+## Usage
 
 ```py
 from src.doc_service import run_doc_service # TODO: how to make this import cleaner?
@@ -40,13 +22,31 @@ result = run_doc_service({
 # }  
 ```
 
+## Dev Setup
+
+Install [Virtualenv](https://virtualenv.pypa.io/en/latest/user_guide.html) and set up an environment:
+
+`virtualenv .venv`
+
+Make sure to activate it (Mac / Linux):
+
+`source .venv/bin/activate`
+
+Add ENV vars.
+
+Create the file `cp .env.sample .env` and enter the values.
+
+Install packages
+
+`pip3 install -r requirements.txt`
+
 ## Testing
 
 Run `pytest` then go check the `out` directory for your html and pdfs.
 
 ## Previewing HTML
 
-You can serve the html output locally by running `python3 -m http.server -d ./out` and navigating to the file in in the browser.
+You can serve the html output locally by running `python3 -m http.server -d ./tests/out` and navigating to the file in in the browser.
 
 NOTE: Just remember that the footer will be the first element in the HTML. See [https://docraptor.com/documentation/article/1067094-headers-footers](https://docraptor.com/documentation/article/1067094-headers-footers) for more info.
 
