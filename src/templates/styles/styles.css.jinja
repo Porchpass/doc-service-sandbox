@@ -399,14 +399,30 @@ footer, footer p, footer small {
   color: var(--color-on-surface-on-surface-muted);
 }
 
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
 /************/
 /* partials */
 /************/
 
 .standard-header {
-  padding-top: var(--space-lg);
-  height: 85px;
   border-bottom: 1px solid var(--color-border-border-subtle); 
+  padding-top: var(--space-lg);
+  {% if notice_date %}
+    height: 85px;
+  {% else %}
+  height: 65px;
+  {% endif %}
 }
 
 .standard-header svg {
