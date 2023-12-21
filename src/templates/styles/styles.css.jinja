@@ -3,7 +3,7 @@
   --page-margin: 42px;
   
   {% if notice_date %}
-    --standard-header-height: calc(var(--page-margin) + 69px);
+    --standard-header-height: calc(var(--page-margin) + 75px);
   {% else %}
     --standard-header-height: calc(var(--page-margin) + 57px);
   {% endif %}
@@ -424,13 +424,16 @@ footer, footer p, footer small {
 /************/
 
 .standard-header {
-  border-bottom: 1px solid var(--color-border-border-subtle); 
+  border-bottom: 1px solid var(--color-on-surface-on-surface-muted); 
+  {% if notice_date %}
+    border-color: var(--color-border-border-dim);
+  {% endif %}
   height: var(--standard-header-height);
   padding-top: var(--page-margin);
 }
 
 .standard-header svg {
-  width: 120px;
+  width: 150px;
   height: auto;
 }
 
