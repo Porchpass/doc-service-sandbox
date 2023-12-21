@@ -1,4 +1,15 @@
 :root {
+  /* page margins */
+  --page-margin: 42px;
+  
+  {% if notice_date %}
+    --standard-header-height: calc(var(--page-margin) + 69px);
+  {% else %}
+    --standard-header-height: calc(var(--page-margin) + 57px);
+  {% endif %}
+
+  --standard-footer-height: calc(var(--page-margin) + 99px + 16px);
+  
   /* colors */
   --color-on-surface-on-surface: #111827;
   --color-on-surface-on-surface-muted: #4A5466;
@@ -50,10 +61,7 @@ h1 { counter-reset: chapter; }
 
 @page {
   size: US-Letter;
-  margin-top: 100px;
-  margin-bottom: 135px;
-  margin-left: 0.65in;
-  margin-right: 0.65in;
+  margin: var(--standard-header-height) var(--page-margin) var(--standard-footer-height);
   @top {
     content: flow(header-html);
   }
@@ -91,7 +99,7 @@ body, h1, h2, h3, h4, h5, h6, p, ol, ul {
 }
 
 h1, h2, h3, h4, h5, h6, p, ol, ul {
-  margin-bottom: calc(var(--space-sm) * 1.25);
+  margin-bottom: var(--space-sm);
 }
 
 p, ul, ol {
@@ -125,7 +133,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 29.333px;
-  margin-bottom: var(--space-xs);
+  margin-bottom: 9px;
 }
 
 h2 {
@@ -417,22 +425,20 @@ footer, footer p, footer small {
 
 .standard-header {
   border-bottom: 1px solid var(--color-border-border-subtle); 
-  padding-top: var(--space-lg);
-  {% if notice_date %}
-    height: 85px;
-  {% else %}
-  height: 65px;
-  {% endif %}
+  height: var(--standard-header-height);
+  padding-top: var(--page-margin);
 }
 
 .standard-header svg {
-  width: 125px;
+  width: 120px;
   height: auto;
 }
 
 .standard-footer {
   border-top: 1px solid var(--color-border-border-dim);
+  height: var(--standard-header-height);
   padding-top: var(--space-xs);
+  padding-bottom: var(--page-margins);
 }
 
 .customers-info {
