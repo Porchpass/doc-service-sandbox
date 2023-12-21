@@ -1,15 +1,4 @@
 :root {
-  /* page margins */
-  --page-margin: 42px;
-  
-  {% if notice_date %}
-    --standard-header-height: calc(var(--page-margin) + 75px);
-  {% else %}
-    --standard-header-height: calc(var(--page-margin) + 57px);
-  {% endif %}
-
-  --standard-footer-height: calc(var(--page-margin) + 99px + 16px);
-  
   /* colors */
   --color-on-surface-on-surface: #111827;
   --color-on-surface-on-surface-muted: #4A5466;
@@ -34,6 +23,14 @@
   --font-lg: 16px;
   --font-xl: 18px;
   --font-xxl: 20px;
+  /* page margins */
+  --page-margin: 42px;
+  {% if notice_date %}
+    --standard-header-height: calc(var(--page-margin) + 75px);
+  {% else %}
+    --standard-header-height: calc(var(--page-margin) + 57px);
+  {% endif %}
+  --standard-footer-height: calc(var(--page-margin) + 99px + var(--space-lg));
   /* misc */
   --radius-radius-minimal: 8px;
   --max-width-narrow: 580px;
