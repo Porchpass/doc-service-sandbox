@@ -394,11 +394,15 @@ footer, footer p, footer small {
 /* font weight */
 
 .font-normal {
-  font-weight: normal !important;
+  font-weight: 400 !important;
+}
+
+.font-semibold {
+  font-weight: 500;
 }
 
 .font-bold {
-  font-weight: bold;
+  font-weight: 700;
 }
 
 /* text color */
@@ -425,9 +429,6 @@ footer, footer p, footer small {
 
 .standard-header {
   border-bottom: 1px solid var(--color-on-surface-on-surface-muted); 
-  {% if notice_date %}
-    border-color: var(--color-border-border-dim);
-  {% endif %}
   height: var(--standard-header-height);
   padding-top: var(--page-margin);
 }
@@ -442,6 +443,10 @@ footer, footer p, footer small {
   height: var(--standard-header-height);
   padding-top: var(--space-xs);
   padding-bottom: var(--page-margins);
+}
+
+.standard-footer a {
+  color: var(--color-on-surface-on-surface);
 }
 
 .customers-info {
