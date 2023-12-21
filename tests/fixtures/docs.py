@@ -1,4 +1,3 @@
-from src.utils.types import Doc, AdverseAdvisorNoticeVars, ConsumerDisclosureStatementVars, KitchenSinkVars
 from tests.fixtures.common import (
   fake_customer, 
   fake_primary_borrower, 
@@ -13,7 +12,7 @@ use_docraptor = True # should we generate PDF through DocRaptor?
 #######################
 # Adverse Action Notice
 
-adverse_action_notice_variables: AdverseAdvisorNoticeVars = {
+adverse_action_notice_variables = {
   "date": "10/9/2024",
   "notice_date": "10/10/2024",
   "application_date": "10/10/2024",
@@ -32,7 +31,7 @@ adverse_action_notice_variables: AdverseAdvisorNoticeVars = {
   **fake_lender,
 }
 
-adverse_action_notice_args: Doc = {
+adverse_action_notice_args = {
   "slug": "adverse_action_notice",
   "use_docraptor": use_docraptor,
   "test_mode": test_mode,
@@ -42,12 +41,12 @@ adverse_action_notice_args: Doc = {
 ###############################
 # Consumer Disclosure Statement
 
-consumer_disclosure_statement_args_variables: ConsumerDisclosureStatementVars = {
+consumer_disclosure_statement_args_variables = {
   "dealer_name": "My Test Dealer",
   **fake_lender,
 }
 
-consumer_disclosure_statement_args: Doc = {
+consumer_disclosure_statement_args = {
   "slug": "consumer_disclosure_statement",
   "use_docraptor": use_docraptor,
   "test_mode": test_mode,
@@ -57,7 +56,7 @@ consumer_disclosure_statement_args: Doc = {
 ##############
 # Kitchen Sink
 
-kitchen_sink_args: KitchenSinkVars = {
+kitchen_sink_args = {
   "date": "10/9/2024",
   "notice_date": "10/10/2024",
   "credit_score": 7,
@@ -73,7 +72,7 @@ kitchen_sink_args: KitchenSinkVars = {
   **fake_lender,
 }
 
-kitchen_sink_args: Doc = {
+kitchen_sink_args = {
   "slug": "kitchen_sink",
   "use_docraptor": use_docraptor,
   "test_mode": test_mode,

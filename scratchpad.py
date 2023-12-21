@@ -1,11 +1,9 @@
-from datetime import datetime
-from typing import Tuple
-from pydantic import BaseModel
+from src.utils.models import DocServiceArgs
 
-class Delivery(BaseModel):
-	timestamp: datetime
-	dimensions: Tuple[int, int]
+docServiceArgs = DocServiceArgs(
+  slug="test",
+  use_docraptor=False,
+  test_mode=True
+)
 
-m = Delivery(timestamp='2020-01-02T03:04:05Z', dimensions=[10, 20])
-# print(repr(m.timestamp))
-print(m.dimensions)
+print(docServiceArgs)
