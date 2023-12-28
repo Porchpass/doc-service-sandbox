@@ -1,29 +1,29 @@
-from typing import List, TypedDict, Required, Union
+from typing import List, TypedDict, Union
 
 #####################
 # COMMON BETWEEN DOCS
 
 Customer = TypedDict('Customer', {
-  "customer_file_number": Required[str],
+  "customer_file_number": str,
 })
 
 PrimaryBorrower = TypedDict('PrimaryBorrower', {
-  "primary_borrower_full_name": Required[str],
-  "primary_borrower_address": Required[str],
+  "primary_borrower_full_name": str,
+  "primary_borrower_address": str,
 })
 
 CoBorrower = TypedDict('CoBorrower', {
-  "co_borrower_full_name": Required[str],
-  "co_borrower_address": Required[str],
+  "co_borrower_full_name": str,
+  "co_borrower_address": str,
 })
 
 Lender = TypedDict('Lender', {
-  "lender_name": Required[str],
-  "lender_address": Required[str],
-  "lender_phone": Required[str],
-  "lender_website": Required[str],
-  "lender_originator": Required[str],
-  "lender_originator_nmls": Required[str],
+  "lender_name": str,
+  "lender_address": str,
+  "lender_phone": str,
+  "lender_website": str,
+  "lender_originator": str,
+  "lender_originator_nmls": str,
   "lender_logo": str,
 })
 
@@ -82,7 +82,7 @@ DocVariables = AdverseAdvisorNoticeVars | ConsumerDisclosureStatementVars | Kitc
 # DOC ARGS
 
 Doc = TypedDict('Doc', {
-  "slug": Required[str],
+  "slug": str,
   "use_docraptor": bool,
   "test_mode": bool,
   "variables": DocVariables,
