@@ -1,6 +1,8 @@
-from src.utils.models import DocServiceArgs
+from src.models import doc
 
-docServiceArgs = DocServiceArgs(
+# from src.models import DocServiceArgs
+
+docServiceArgs = doc.DocServiceArgs(
   slug="test",
   use_docraptor=False,
   test_mode=True
