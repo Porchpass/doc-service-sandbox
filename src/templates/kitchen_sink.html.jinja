@@ -3,69 +3,76 @@
 {% set title = "Kitchen Sink Demo" %}
 {% set version = "000000000.1" %}
 
-{% block header %}
-  {% include "partials/standard-header.html.jinja" %}
-{% endblock %}
-
-{%  block footer %}
-  {% include "partials/standard-footer.html.jinja" %}
-{% endblock %}
-
 {% block content %}
-  <h2>Testing everything</h2>
-  <p>This doc is a place to test out all blocks and styles</p>
+  <section class="chapter">
+    {% include "partials/standard-header.html.jinja" %}
 
-  <p>{{intro}}</p>
+    <h2>Chapter 1</h2>
+    <p>This doc is a place to test out all blocks and styles. This is chapter 1.</p>
 
-  <p class="text-muted">Use the <code>.text-muted</code> class for muted text.</p>
+    <p>{{intro}}</p>
 
-  <p>Use the <code>.font-bold</code> class for <span class="font-bold">bold text</span>.</p>
+    <p class="text-muted">Use the <code>.text-muted</code> class for muted text.</p>
 
-  <h3>Here's a list</h3>
-  <ul>
-    {%- for item in list_of_items %}
-      <li>{{ item }}</li>
-    {% endfor %}
-  </ul>
+    <p>Use the <code>.font-bold</code> class for <span class="font-bold">bold text</span>.</p>
 
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, facilis laborum. Voluptas dignissimos hic quibusdam minima dolorem in optio vel, molestiae reprehenderit officia voluptates dicta aspernatur fuga placeat magnam beatae.</p>
+    <h3>Here's a list</h3>
+    <ul>
+      {%- for item in list_of_items %}
+        <li>{{ item }}</li>
+      {% endfor %}
+    </ul>
 
-  <h2>Customer Info</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, facilis laborum. Voluptas dignissimos hic quibusdam minima dolorem in optio vel, molestiae reprehenderit officia voluptates dicta aspernatur fuga placeat magnam beatae.</p>
 
-  {% include "partials/customers-info.html.jinja" %}
+    <h2>Customer Info</h2>
 
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, facilis laborum. Voluptas dignissimos hic quibusdam minima dolorem in optio vel, molestiae reprehenderit officia voluptates dicta aspernatur fuga placeat magnam beatae.</p>
+    {% include "partials/customers-info.html.jinja" %}
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, facilis laborum. Voluptas dignissimos hic quibusdam minima dolorem in optio vel, molestiae reprehenderit officia voluptates dicta aspernatur fuga placeat magnam beatae.</p>
+      
+    <h2>Here's a table</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Month</th>
+          <th>Savings</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>January</td>
+          <td>$100</td>
+        </tr>
+        <tr>
+          <td>February</td>
+          <td>$80</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>Sum</td>
+          <td>$180</td>
+        </tr>
+      </tfoot>
+    </table>
     
-  <h2>Here's a table</h2>
+    <h2>Testing Equifax Contact Table</h2>
 
-  <table>
-    <thead>
-      <tr>
-        <th>Month</th>
-        <th>Savings</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>January</td>
-        <td>$100</td>
-      </tr>
-      <tr>
-        <td>February</td>
-        <td>$80</td>
-      </tr>
-    </tbody>
-    <tfoot>
-      <tr>
-        <td>Sum</td>
-        <td>$180</td>
-      </tr>
-    </tfoot>
-  </table>
-  
-  <h2>Testing Equifax Contact Table</h2>
+    <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, facilis laborum. Voluptas dignissimos hic quibusdam minima dolorem in optio vel, molestiae reprehenderit officia voluptates dicta aspernatur fuga placeat magnam beatae.</p>
 
-  <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, facilis laborum. Voluptas dignissimos hic quibusdam minima dolorem in optio vel, molestiae reprehenderit officia voluptates dicta aspernatur fuga placeat magnam beatae.</p>
+    {% include "partials/equifax-contact-table.html.jinja" %}
 
-  {% include "partials/equifax-contact-table.html.jinja" %}
+    {% include "partials/standard-footer.html.jinja" %}
+  </section>
+
+  <section class="chapter">
+    {% include "partials/standard-header.html.jinja" %}
+
+    <h2>Chapter 2</h2>
+    <p>This is a second page.</p>
+
+    {% include "partials/standard-footer.html.jinja" %}
+  </section>
 {% endblock %}

@@ -1,4 +1,6 @@
 :root {
+  /* page margins */
+  --page-margin: 42px;
   /* colors */
   --color-on-surface-on-surface: #111827;
   --color-on-surface-on-surface-muted: #4A5466;
@@ -23,14 +25,6 @@
   --font-lg: 16px;
   --font-xl: 18px;
   --font-xxl: 20px;
-  /* page margins */
-  --page-margin: 42px;
-  {% if notice_date %}
-    --standard-header-height: calc(var(--page-margin) + 75px);
-  {% else %}
-    --standard-header-height: calc(var(--page-margin) + 57px);
-  {% endif %}
-  --standard-footer-height: calc(var(--page-margin) + 99px + var(--space-lg));
   /* misc */
   --radius-radius-minimal: 8px;
   --max-width-narrow: 580px;
@@ -40,6 +34,7 @@
 /* DocRaptor styles */
 /********************/
 
+/*
 header {
   flow: static(header-html);
 }
@@ -47,8 +42,12 @@ header {
 footer {
   flow: static(footer-html);
 }
+*/
 
-.chapter { break-before: break; }
+.chapter { 
+  break-before: break;
+  position: relative;
+}
 
 .heading { break-after: avoid; }
 
@@ -58,13 +57,8 @@ h1 { counter-reset: chapter; }
 
 @page {
   size: US-Letter;
-  margin: var(--standard-header-height) var(--page-margin) var(--standard-footer-height);
-  @top {
-    content: flow(header-html);
-  }
-  @bottom {
-    content: flow(footer-html);
-  }
+  margin: var(--page-margin);
+  /* page count */
   @bottom-right-corner {
     color: var(--color-on-surface-on-surface-muted);
     font-family: 'Inter', sans-serif;
@@ -83,6 +77,10 @@ html {
   /* width: 816px; */
   /* height: 1056px; */
   box-sizing: border-box;
+}
+
+html, body, #content, .chapter {
+  height: 100%;
 }
 
 *, *:before, *:after {
@@ -420,14 +418,22 @@ footer, footer p, footer small {
   text-align: center;
 }
 
+/***************/
+/* base layout */
+/***************/
+
+main#content {
+  position: relative;
+}
+
 /************/
 /* partials */
 /************/
 
 .standard-header {
   border-bottom: 1px solid var(--color-on-surface-on-surface-muted); 
-  height: var(--standard-header-height);
-  padding-top: var(--page-margin);
+  margin-bottom: var(--space-xs);
+  width: 100%;
 }
 
 .standard-header svg {
@@ -437,9 +443,11 @@ footer, footer p, footer small {
 
 .standard-footer {
   border-top: 1px solid var(--color-border-border-dim);
-  height: var(--standard-header-height);
   padding-top: var(--space-xs);
-  padding-bottom: var(--page-margins);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
 
 .standard-footer a {
@@ -457,7 +465,7 @@ footer, footer p, footer small {
 }
 
 .customers-info table {
-  margin: var(--space-xs) 0px;
+  margin: 0px 0px var(--space-xs);
 }
 
 .customers-info td, .customers-info th {

@@ -3,16 +3,10 @@
 {% set title = "Adverse Action Notice" %}
 {% set version = "20230405.1" %}
 
-{% block header %}
-  {% include "partials/standard-header.html.jinja" %}
-{% endblock %}
-
-{%  block footer %}
-  {% include "partials/standard-footer.html.jinja" %}
-{% endblock %}
-
 {% block content %}
   <section class="chapter">
+    {% include "partials/standard-header.html.jinja" %}
+
     {% include "partials/customers-info.html.jinja" %}
 
     <h2>Thank you for your recent application.</h2>
@@ -47,9 +41,13 @@
         </tbody>
       </table>
     </div>
+
+    {% include "partials/standard-footer.html.jinja" %}
   </section>
 
   <section class="chapter">
+    {% include "partials/standard-header.html.jinja" %}
+
     <p class="text-muted">We also obtained your credit score from this consumer reporting agency and used it in making our decision. Your credit score is a number that reflects the information in your consumer report. Your credit score can change, depending on how the information in your consumer report changes.</p>
     <div class="container-narrow">
       <table>
@@ -77,6 +75,9 @@
       {% endfor %}
     </ol>
     <p class="text-muted">If you have any questions regarding your credit score, you should contact the entity that provided the credit score at:</p>
+
     {% include "partials/equifax-contact-table.html.jinja" %}
+
+    {% include "partials/standard-footer.html.jinja" %}
   </section>
 {% endblock %}
