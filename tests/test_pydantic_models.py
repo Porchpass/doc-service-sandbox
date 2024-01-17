@@ -1,13 +1,14 @@
-from src.models import doc, person, customer
-
+from src.models import doc, customer
+from src.models.person import Person
 def test_person_model():
   # arrange
   full_name = "josh test"
+  json_args = {"full_name": "josh test"}
   # act
-  p = person.Person(full_name=full_name)
+  p = Person(**json_args)
   # assert
   assert p.full_name == full_name
-  assert False
+  assert p.model_dump() == json_args
 
 # def test_customer_model():
 #   # arrange
